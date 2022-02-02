@@ -33,13 +33,9 @@ const letterPositions = function (sentence) {
   return results;
 };
 
+/*
 assertArraysEqual(letterPositions("hello").e, [1]);
 assertArraysEqual(letterPositions("hello").h, [0]);
 assertArraysEqual(letterPositions("hello").l, [2,3]);
 assertArraysEqual(letterPositions("hello").o, [4]);
-
-
-let results2 = (letterPositions("lighthouse in the house"));
-for (let x in results2){
-  console.log (`{x}: ${results2[x]}`);
-}
+*/
