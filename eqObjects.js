@@ -1,14 +1,22 @@
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
-    console.log(`${String.fromCodePoint(128568)} Assertion Passed: ${actual} === ${expected}`);
+    console.log(
+      `${String.fromCodePoint(
+        128568
+      )} Assertion Passed: ${actual} === ${expected}`
+    );
   } else {
-    console.log(`${String.fromCodePoint(128566)} Assertion Failed: ${actual} != ${expected}`);
+    console.log(
+      `${String.fromCodePoint(
+        128566
+      )} Assertion Failed: ${actual} != ${expected}`
+    );
   }
 };
 
 const eqArrays = function (array1, array2) {
   let check = true;
-  
+
   if (array1.length !== array2.length) {
     check = false;
     return check;
@@ -21,8 +29,7 @@ const eqArrays = function (array1, array2) {
     }
   }
   return check;
-}
-
+};
 
 const eqObjects = function (object1, object2) {
   let check = true;
@@ -38,15 +45,13 @@ const eqObjects = function (object1, object2) {
       if (check === false) {
         return check;
       }
-    }
-    else if (object1[x] !== object2[x]) {
+    } else if (object1[x] !== object2[x]) {
       check = false;
       return check;
     }
   }
 
   return check;
-
 };
 
 /*
