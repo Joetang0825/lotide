@@ -29,6 +29,7 @@ const takeUntil = function (array, callback) {
   return list;
 }
 
+/*
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]);
 
@@ -39,4 +40,7 @@ assertArraysEqual(takeUntil(data2, x => x === ','), ['I\'ve', 'been', 'to', 'Hol
 
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
+*/
+
+module.exports = takeUntil;
 

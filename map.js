@@ -46,3 +46,6 @@ assertArraysEqual(
   ["grounds", "controls", "tos", "majors", "toms"]
 );
 */
+
+
+module.exports = map;

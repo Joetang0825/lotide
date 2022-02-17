@@ -30,3 +30,5 @@ const result1 = countLetters("lighthouse in the house");
 for (const element in result1) {
   console.log (element, result1[element]);
 }*/
+
+module.exports = countLetters;
