@@ -1,11 +1,14 @@
+// Compares 2 arrays and return true if they are the same, return false otherwise
 const eqArrays = function (array1, array2) {
   let check = true;
 
+  // Determin if the size of 2 arrays are the same. If not, return false
   if (array1.length !== array2.length) {
     check = false;
     return check;
   }
 
+  // Compare each element between 2 arrays and return true if all elements are the same
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       check = false;
@@ -15,15 +18,17 @@ const eqArrays = function (array1, array2) {
   return check;
 }
 
-
+// Compare 2 objects and return true if they are the same, return false otherwise
 const eqObjects = function (object1, object2) {
   let check = true;
 
+  // Check if number of keys from 2 objects are the same
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     check = false;
     return check;
   }
 
+  // Check if keys in the object is an Array. If yes, then compare key from object 1 and object 2
   for (let x in object1) {
     if (Array.isArray(object1[x])) {
       check = eqArrays(object1[x], object2[x]);
@@ -37,11 +42,13 @@ const eqObjects = function (object1, object2) {
     }
   }
 
+  // Passed all the checks above and the two objects are the same so return true
   return check;
+
 
 };
 
-// FUNCTION IMPLEMENTATION
+// Check if number of keys from 2 objects are the same
 const assertObjectsEqual = function (actual, expected) {
   const inspect = require('util').inspect;
 
@@ -53,7 +60,7 @@ const assertObjectsEqual = function (actual, expected) {
   }
 };
 
-/*
+/* Testing data
 const movie = {
   horror: 'Scary Movie 1',
   action: 'Avengers',
@@ -83,4 +90,5 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 assertObjectsEqual(cd, cd2);
 */
 
+// Export assertObjectsEqual function
 module.exports = assertObjectsEqual;

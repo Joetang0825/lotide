@@ -1,15 +1,4 @@
-
-
-
-/*
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([]), []);
-assertArraysEqual(middle(['abc', 'bcd', 'def', 'efg']), ['bcd', 'def']);
-*/
-
+// Use Mocha and Chai to verify the result for middle function
 const middle = require('../middle');
 const assert = require('chai').assert;
 

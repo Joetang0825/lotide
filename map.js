@@ -1,3 +1,4 @@
+// Compare 2 arrays to see if they are the same
 const eqArrays = function (array1, array2) {
   let check = true;
   for (let i = 0; i < array1.length; i++) {
@@ -8,6 +9,7 @@ const eqArrays = function (array1, array2) {
   return check;
 };
 
+// Compare two arrays using eqArray() and display message to confirm if the actual result matches the expected result
 const assertArraysEqual = function (ar1, ar2) {
   if (eqArrays(ar1, ar2)) {
     console.log(
@@ -20,6 +22,7 @@ const assertArraysEqual = function (ar1, ar2) {
   }
 };
 
+// Create an array that store the result of a callback function
 const map = function (array, callback) {
   const results = [];
   for (let item of array) {
@@ -28,7 +31,7 @@ const map = function (array, callback) {
   return results;
 };
 
-/*
+/* Test Data
 const words = ["ground", "control", "to", "major", "tom"];
 
 assertArraysEqual(
@@ -47,5 +50,5 @@ assertArraysEqual(
 );
 */
 
-
+// Export map function
 module.exports = map;

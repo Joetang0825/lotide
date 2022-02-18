@@ -1,3 +1,4 @@
+// Display message to indicate if the actual result matches the expected result
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`${String.fromCodePoint(128568)} Assertion Passed: ${actual} === ${expected}`);
@@ -6,6 +7,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+// Export assertEqual function
 module.exports = assertEqual;
 
 

@@ -1,3 +1,4 @@
+// Display message to indicate the actual result matches the expected result
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`${String.fromCodePoint(128568)} Assertion Passed: ${actual} === ${expected}`);
@@ -6,6 +7,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+// CountOnly: count the number of occurence of object keys in an array 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
 const countOnly = function (allItems, itemsToCount) {
@@ -13,9 +15,11 @@ const countOnly = function (allItems, itemsToCount) {
 
   for (const item of allItems) {
     if (itemsToCount[item]) {
+      // The item exists
       if (results[item]) {
         results[item] += 1;
       }
+      // First occurence 
       else {
         results[item] = 1;
       }
@@ -25,7 +29,7 @@ const countOnly = function (allItems, itemsToCount) {
   return results;
 }
 
-/*
+/* Test Data
 const firstNames = [
   "Karl",
   "Salima",
@@ -47,4 +51,5 @@ assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
 */
 
+// Export countOnly function
 module.exports = countOnly;

@@ -1,3 +1,4 @@
+// Use Mocha and Chai to verify the result for head function
 const head = require('../head');
 const assert = require('chai').assert;
 

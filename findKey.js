@@ -1,3 +1,4 @@
+// Display message to indicate the actual result matches the expected result
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`${String.fromCodePoint(128568)} Assertion Passed: ${actual} === ${expected}`);
@@ -6,6 +7,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+// Find the key in Objects by providing a callback function
 const findKey = function (objects, callback) {
   for (let object in objects) {
     if (callback(objects[object])) {
@@ -14,7 +16,7 @@ const findKey = function (objects, callback) {
   }
 }
 
-/*
+/* Test Data
 assertEqual(
   findKey({
     "Blue Hill": { stars: 1 },
@@ -26,4 +28,5 @@ assertEqual(
   }, x => x.stars === 2), "noma");
 */
 
+// Export findKey function
 module.exports = findKey;

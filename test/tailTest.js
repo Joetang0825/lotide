@@ -1,3 +1,4 @@
+// Use Mocha and Chai to verify the result for tail function
 const tail = require('../tail');
 const assert = require('chai').assert;
 
